@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live-tv ADITV</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+    	body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #0d111c;
+	
+	}
+	.rainbow-text {
+	font-family: Amita, cursive;
+	font-weight: bold;
+	font-size: 51px;
+	-webkit-text-stroke-width: 1.1px;
+	-webkit-text-fill-color: black;
+}
+.rainbow-text .block-line > span {
+	display: inline-block;
+}
+	.fire_menu {  padding-top: 4px; padding-bottom: 4px; padding-left: 12px; padding-right: 12px; font-family: Amita, cursive;}
+	.input-group{
+		border-radius: 5px; 
+		box-shadow: 2px 2px 5px rgba(0,0,0, .3); 
+}
+#typing-text {
+	width: 100%;
+	height: 40px;
+	font-size: 15px;
+	border: solid 1px #0d111c;
+	color: #ffffff;
+	background-color: #0d111c;
+	text-align: center;
+	font-family: Amita, cursive;
+	font-weight: bold;
+	padding: 5px;
+	resize: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.gf_text {
+	font-family: Amita, cursive;
+	font-size: 15px;
+}
+
+.up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 999999;
+}
+
+  	#livebbtvTable {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 0fr));
+        grid-gap: 15px;
+        grid-right: 10px;
+        grid-left: 10px;
+        justify-content: center; 
+      }
+      #livebbtvTable > div {
+        font-size: 13px;
+        color: Black;
+        text-align: center;
+      }
+       .livebbtv-item { 
+   border: 1px solid #ff4d4d; 
+  display : block; 
+  width: 170px; 
+  height: 250px; 
+  margin: 0px; 
+  padding: 0px; 
+  overflow: hidden; 
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px rgba(0,0,0, .3); 
+  justify-content: center; 
+} 
+.livebbtv-item > * { 
+     margin: 0px; 
+     padding: 0; 
+} 
+.livebbtv-item .livebbtv-thumb { 
+    left: 10; 
+    right: 0; 
+} 
+.livebbtv-item .livebbtv-thumb img { 
+    width: 100%; 
+    height: 110px; 
+    pointer-events: none; 
+}
+.livebbtv-name{
+   bottom: 0px;
+   border-top: 1px solid #ff4d4d; 
+  color: #ffffff;
+  margin: 0;
+  font-family: Amita, cursive;
+  padding: 5px; bottom: 0px; 
+}
+  a{
+  	text-decoration: none;
+  	}
+  .footer{
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    bottom: 0%;
+    background-color: #0d111c;
+    text-align: center;
+    border-top: solid 1px #ff4d4d;
+    font-family: Amita, cursive;
+    color: white;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #ff4d4d;
+}
+
+@media only screen and (max-width: 766px) {
+  
+    .footer {
+        font-size: 15px;
+    }
+    }
+    .copyright{
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+  	</style>
+</head>
+<body>
+	<i class="uil uil-angle-up up"></i>
+	<div class="rainbow-text" style="text-align: center;">
+	<span class="block-line"><span><span style="color:#ff0000;">A</span><span style="color:#ff9900;">a</span><span style="color:#ccff00;">d</span><span style="color:#33ff00;">i</span><span style="color:#00ff66;">t</span><span style="color:#00ffff;">v</span><span style="color:#0066ff;">-</span><span style="color:#3300ff;">i</span><span style="color:#3300ff;">p</span><span style="color:#cc00ff;">t</span><span style="color:#ff0099;">v</span></span></span>
+</div>
+<br>
+<center>
+		<img alt="" class="lazyload" data-src="https://www.epicon.in/img/epic-on-logo.png?v=1669702386" src="https://www.epicon.in/img/epic-on-logo.png?v=1669702386" style="border-style: none; box-sizing: border-box; height: 38px; vertical-align: middle;" title="" />
+		</center>
+		
+	<center>
+	<div class="fire_menu">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Channel Here" aria-label="Search Channel Here" id="look_tv_here">
+        <button class="btn btn-danger btn-sm" type="button" id="look_tv_button">Search</button>
+    </div>
+</div>
+</center>
+	<textarea id="typing-text" readonly></textarea>
+	<div class="main" id="ch_list">
+
+ <div>             
+                  
+<div id='livebbtvTable'>
+
+
+     
+     <div class="livebbtv-item"> <a  href="ishara.html"><div class="livebbtv-thumb" style=" bottom: 0px; "><img class="loading" src="https://www.epicon.in/img/ishara-logo.png" width="110px" height="110px"><img alt="" class="livetv-img" src="https://www.epicon.in/img/live-ishara-tv-1.png"><div class="livebbtv-name"> Ishara</div></div> </a> </div>
+<div class="livebbtv-item"> <a  href="epic.html"><div class="livebbtv-thumb" style=" bottom: 0px; "><img class="loading" src="https://www.epicon.in/img/epic-tv-new.png" width="110px" height="110px"><img alt="" class="livetv-img" src="https://www.epicon.in/img/epic_livetv.png" ><div class="livebbtv-name"> Epic</div></div> </a> </div>
+     <div class="livebbtv-item"> <a  href="filamachi.html"><div class="livebbtv-thumb" style=" bottom: 0px; "><img class="loading" src="https://www.epicon.in/img/new_filamchi_logo.png" width="110px" height="110px"><img alt="" class="livetv-img" src="https://www.epicon.in/img/filamchi_pic.png" ><div class="livebbtv-name"> Filamachi</div></div> </a> </div>
+     <div class="livebbtv-item"> <a  href="showbox.html"><div class="livebbtv-thumb" style=" bottom: 0px; "><img class="loading" src="https://www.epicon.in/img/new-show-box-logo.png" width="110px" height="110px"><img alt="" class="livetv-img" src="https://www.epicon.in/img/show_box_livetv.png" ><div class="livebbtv-name"> Showbox</div></div> </a> </div>
+     <div class="livebbtv-item"> <a  href="gubbare.html"><div class="livebbtv-thumb" style=" bottom: 0px; "><img class="loading" src="https://www.epicon.in/img/gubbare-logo.png" width="110px" height="110px"><img alt="" class="livetv-img" src="https://www.epicon.in/img/gubbare-pic.png"  height="140px"><div class="livebbtv-name">Gubbare</div></div> </a> </div>
+     
+     
+     
+     
+     
+     
+     </div>
+</div>
+</div>
+
+   
+        <div class="footer">
+    <p class="copyright">©2023</p>
+Tamplate Designed By&nbsp;<a href="https://t.me/k114technology">ADITV™</a>
+   </div>
+   
+     <script src="https://code.jquery.com/jquery-3.6.1.js" ></script>
+<script type="module" src="js/script.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#look_tv_here").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".livebbtv-item").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+
+
+
+        $(document).ready(function(){
+            $("#look_tv_button").click(function(){
+               $("#drop").slideToggle("fast"); 
+            });
+        });
+
+</script>
+
+<script>
+	
+(() => {
+	let TypingSpeed = 50;
+	let NxtMsgDelay = 1000;
+	let CharacterPos = 0;
+	let MsgBuffer = "";
+	let MsgIndex = 0;
+	let delay;
+	let id = document.getElementById("typing-text");
+	let messages =
+[
+	"Welcome to my website!",
+	"watch epicon channels",
+	"Thank's for visiting ADITV website"
+]
+
+	// https://www.html-code-generator.com/html/typewriter-text-scroller
+	const StartTyping = () => {
+		if (CharacterPos != messages[MsgIndex].length) {
+			MsgBuffer += messages[MsgIndex].charAt(CharacterPos);
+			id.value = MsgBuffer+(CharacterPos != messages[MsgIndex].length-1 ? "_":"");
+			delay = TypingSpeed;
+			id.scrollTop = id.scrollHeight; 
+		} else {
+			delay = NxtMsgDelay;
+			MsgBuffer   = "";
+			CharacterPos = -1;
+			if (MsgIndex!= messages.length-1){
+				MsgIndex++;
+			}else {
+				MsgIndex = 0;
+			}
+		}
+		CharacterPos++;
+		setTimeout(StartTyping, delay);
+	}
+	StartTyping();
+})();
+
+</script>
+
+<script>
+const up = document.querySelector('.up')
+
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    up.style.display = "block"
+  } else {
+    up.style.display = "none"
+  }
+  })
+  
+  up.addEventListener('click', () => {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+})
+
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+    htmlbar.classList.add('activehtml')
+    cssbar.classList.add('activecss')
+    jsbar.classList.add('activejs')
+  }
+})
+
+</script>
+</body>
+</html>
